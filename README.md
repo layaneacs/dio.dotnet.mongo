@@ -27,7 +27,7 @@
 
 * #### Embedded sub-document (contact e access)
 
-```
+```json
 {
   _id: <ObjectId1>,
   username: "123xyz",
@@ -45,7 +45,7 @@
 * #### Link/Referência (contact e access)
 
 #####  user document
-```
+```json
 {
     _id: <ObjectId1>,
     username: "123xyz"
@@ -53,7 +53,7 @@
 ```
 
 ##### contact document
-```
+```json
 {
     _id: <ObjectId2>,
     user_id: <ObjectId1>,
@@ -63,7 +63,7 @@
 ```
 
 ##### access document
-```
+```json
 {
     _id: <ObjectId3>,
     user_id: <ObjectId1>,
@@ -71,4 +71,3 @@
     group: "dev"
 }  
 ```
-
