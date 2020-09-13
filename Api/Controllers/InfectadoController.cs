@@ -6,7 +6,7 @@ using MongoDB.Driver;
 namespace Api.Controllers
 {
     [ApiController]
-    [Route("[v1/controller]")]
+    [Route("v1/[controller]")]
     public class InfectadoController : ControllerBase
     {
         Data.MongoDB _mongodb;
@@ -22,7 +22,7 @@ namespace Api.Controllers
         [HttpPost]
         public ActionResult SalvarInfec(InfectadoDTO dto)
         {
-            var infectado = new Infectado(dto.DataNascimento, dto.Sexo, dto.Latitude, dto.Longitude);
+            var infectado = new Infectado(dto.DataNascimento, dto.Sexo, dto.Longitude, dto.Latitude);
             _infectadosCollections.InsertOne(infectado);
             return StatusCode(201, "Adicionado com sucesso");
         }
